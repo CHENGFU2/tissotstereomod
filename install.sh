@@ -123,7 +123,9 @@ REPLACE="
 
 print_modname() {
   ui_print "*******************************"
-  ui_print "     tissot dual speaker mod    "
+  ui_print "     Mi A1 Dual Speaker Mod    "
+  ui_print "              By               "
+  ui_print "  WhatzIt2Ya @ xda-developers  "
   ui_print "*******************************"
 }
 
@@ -153,3 +155,21 @@ set_permissions() {
 }
 
 # You can add more functions to assist your custom script code
+
+# Check device
+
+DEVICE=$(system_prop ro.product.model)
+CODENAME=$(system_prop ro.product.device)
+
+on_device_manager() {
+if [ "$DEVICE" = "Mi A1" ] || [ "$CODENAME" = "tissot" ]; then
+    echo "- Device :" $DEVICE
+    echo "- Codename :" $CODENAME
+    echo "- Installing module"
+    # mi_a1_dual_speaker_mod
+else
+    echo "- Device not found !"
+    echo "- Device :" $DEVICE
+    echo "- Codename :" $CODENAME
+fi
+}
