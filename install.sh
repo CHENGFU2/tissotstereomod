@@ -155,22 +155,3 @@ set_permissions() {
 }
 
 # You can add more functions to assist your custom script code
-
-# Check device
-
-DEVICE=$(system_prop ro.product.model)
-CODENAME=$(system_prop ro.product.device)
-
-# main
-on_device_manager() {
-if [ "$DEVICE" = "Mi A1" ] || [ "$CODENAME" = "tissot" ]; then
-    echo "- Device :" $DEVICE
-    echo "- Codename :" $CODENAME
-    echo "- Installing module"
-    # mi_a1_dual_speaker_mod
-else
-    echo "- Device not found !"
-    echo "- Device :" $DEVICE
-    echo "- Codename :" $CODENAME
-fi
-}
