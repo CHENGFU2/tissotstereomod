@@ -153,14 +153,3 @@ set_permissions() {
 }
 
 # You can add more functions to assist your custom script code
-
-checkisTissot() {
-if [ "$(grep_prop ro.product.device)" == "$1" ] || [ "$(grep_prop ro.build.product)" == "$1" ]; then
-    return 0
-  else
-    return 1
-  fi
-}
-if !checkisTissot "tissot" && !checkisTissot "tissot"; then
-  abort "! It can only be used for MI A1"
-fi
