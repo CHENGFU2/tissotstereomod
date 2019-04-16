@@ -161,6 +161,7 @@ set_permissions() {
 DEVICE=$(system_prop ro.product.model)
 CODENAME=$(system_prop ro.product.device)
 
+# main
 on_device_manager() {
 if [ "$DEVICE" = "Mi A1" ] || [ "$CODENAME" = "tissot" ]; then
     echo "- Device :" $DEVICE
