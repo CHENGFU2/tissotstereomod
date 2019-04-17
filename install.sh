@@ -155,12 +155,6 @@ set_permissions() {
 }
 
 # You can add more functions to assist your custom script code
-
-#
-# Target dependencies
-#
-
-# Check device
 brand="$(grep_prop ro.product.brand)"
 if [ "$brand" != "Xiaomi" ]; then
   echo "! $brand is not supported"
