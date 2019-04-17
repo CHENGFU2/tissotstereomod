@@ -155,3 +155,11 @@ set_permissions() {
 }
 
 # You can add more functions to assist your custom script code
+
+brand="$(grep_prop ro.product.brand)"
+device="$(grep_prop ro.product.device)"
+if [ "$brand" != "Xiaomi" ] || [ "$device" != "Mi A1" ]; then
+  echo "! $brand is not supported"
+  echo "! $device is not supported"
+  exit 1
+fi
