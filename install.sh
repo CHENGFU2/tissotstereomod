@@ -156,6 +156,11 @@ set_permissions() {
 
 # You can add more functions to assist your custom script code
 
+#
+# Target dependencies
+#
+
+# Check device
 brand="$(grep_prop ro.product.brand)"
 device="$(grep_prop ro.product.model)"
 if [ "$brand" != "Xiaomi" ] || [ "$device" != "Mi A1" ]; then
