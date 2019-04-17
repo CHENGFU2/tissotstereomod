@@ -162,9 +162,7 @@ set_permissions() {
 
 # Check device
 brand="$(grep_prop ro.product.brand)"
-device="$(grep_prop ro.product.model)"
-if [ "$brand" != "Xiaomi" ] || [ "$device" != "Mi A1" ]; then
+if [ "$brand" != "Xiaomi" ]; then
   echo "! $brand is not supported"
-  echo "! $device is not supported"
   exit 1
 fi
