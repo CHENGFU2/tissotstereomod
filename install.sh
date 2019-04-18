@@ -43,7 +43,6 @@ LATESTARTSERVICE=false
 ###########################################################################
 # Make sure the Path is correct
 REPLACE="
-/system/vendor/etc/mixer_paths_mtp.xml
 "
 
 ##########################################################################################
@@ -158,6 +157,6 @@ device="$(grep_prop ro.product.model)"
 if [ "$brand" != "Xiaomi" ] || [ "$device" != "Mi A1" ]; then
   echo "! $brand is not supported"
   echo "! $device is not supported"
-  exit 1
+  abort 1
 fi
 
