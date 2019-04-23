@@ -5,4 +5,5 @@ Find XDA thread [here](https://forum.xda-developers.com/mi-a1/themes/dual-stereo
 
 Changelog:
 
+v2 - Increased earpiece volume
 v1 - Initial Release
